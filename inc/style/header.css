@@ -52,94 +52,115 @@
 }
 
 /******** Header ********/
-#index {
-    
-}
-
     /* Name */
 #nameButton {
-    margin: 1.878vh calc(2vw + 2.578125vw + 0.398vw);
-    height: 11.94vh;
-    width: 75.9375vw;
+    margin: 1.878vh 0 0 calc(2vw + 0.398vw + 2.578125vw);
+    height: 7vw;
+    width: calc(100vw - 6.7578125vw - 3.1vw);
     position: absolute;
     top: 0;
-    background-color: #EB4225;
+    z-index: 99;
 }
 
 #nameFlex {
     display: flex;
     margin: 1.878vh 2vw 0 2vw;
     gap: 0.398vw;
+    height: 7vw;
+    z-index: 99;
 }
 
 #emilerouillard {
-    height: 11.94vh;
     margin: auto;
     display: flex;
-    max-width: 1425px;
+    width: 100%;
+    height: 100%;
 }
 
-#name1 {
-    width: 14.53vw;
-    max-width: 207.05px;
-    height: 11.94vh;
-    background-image: url("../public/images/emileRouillard/em.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+#emilerouillard > div:first-of-type {
+    width: 16.35883905%;
+    min-height: 11.94vh;
     margin-right: 1.32vw;
 }
 
+#name1 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/emileRouillard/em.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+#emilerouillard > div:nth-of-type(2) {
+    width: 34.696569921%;
+    min-height: 11.94vh;
+    margin-right: 0.90vw;
+}
+
 #name2 {
-    width: 30.82vw;
-    max-width: 439.17px;
-    height: 11.94vh;
-    background-image: url("../public/images/emileRouillard/ile.ro.svg");
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/emileRouillard/ile.ro.svg");
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 0.90vw;
 }
 
-#name3 {
-    width: 6.02vw;
-    max-width: 85.78px;
-    height: 11.94vh;
-    background-image: url("../public/images/emileRouillard/u.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+#emilerouillard > div:nth-of-type(3) {
+    width: 6.77220756376%;
+    min-height: 11.94vh;
     margin-right: 1.32vw;
 }
 
-#name4 {
-    width: 26.99vw;
-    max-width: 384.594px;
-    height: 11.94vh;
-    background-image: url("../public/images/emileRouillard/illar.svg");
+#name3 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/emileRouillard/u.svg");
     background-repeat: no-repeat;
     background-position: center;
+}
+
+#emilerouillard > div:nth-of-type(4) {
+    width: 30.38698328936%;
+    min-height: 11.94vh;
+    margin-right: 0.90vw;
+}
+
+#name4 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/emileRouillard/illar.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#emilerouillard > div:nth-of-type(5) {
+    width: 7.12401055409%;
+    min-height: 11.94vh;
     margin-right: 0.90vw;
 }
 
 #name5 {
-    width: 6.33vw;
-    max-width: 90.19px;
-    height: 11.94vh;
-    background-image: url("../public/images/emileRouillard/d.svg");
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/images/emileRouillard/d.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #leftBracket {
-    width: 2.578125vw;
-    height: 11.94vh;
-    background-image: url("../public/images/parenthese-01.svg");
+    width: 2.755vw;
+    height: 7vw;
+    background-image: url("../../public/images/parenthese-01.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 #rightBracket {
-    width: 2.578125vw;
-    height: 11.94vh;
-    background-image: url("../public/images/parenthese-02.svg");
+    width: 2.75vw;
+    height: 7vw;
+    background-image: url("../../public/images/parenthese-02.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -149,6 +170,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.4861111vh;
+    margin-top: min(22.24px, 1.54444444vh);
+    z-index: 99;
 }
 
 #socials a {
@@ -157,10 +180,7 @@
     font-style: normal;
     text-decoration: none;
     color: var(--black);
-}
-
-#behance {
-    margin-top: 1px;
+    z-index: 99;
 }
 
 #behanceBracketRight {
@@ -210,6 +230,7 @@
     font-family: roc-grotesk, sans-serif;
     font-weight: 400;
     font-style: normal;
+    margin-top: min(22.24px, 1.54444444vh);
 }
 
 /******** Navigation ********/
@@ -220,6 +241,7 @@ nav {
     left: calc(2vw + 2.578125vw + 0.398vw + 0.460326vw);
     display: flex;
     gap: 50px;
+    z-index: 99;
 }
 
 nav a {

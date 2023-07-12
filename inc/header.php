@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/index.css">
-    <script src="script/header.js" defer></script>
+    <link rel="stylesheet" href="inc/style/header.css">
+    <link rel="stylesheet" href="inc/style/index.css">
+    <script src="inc/script/header.js" defer></script>
     <link rel="stylesheet" href="https://use.typekit.net/jtd1rom.css">
     <title>Emile Rouillard</title>
 </head>
 <body>
     <header>
-        <div id="nameButton"></div>
+        <a href="aPropos.php" id="nameButton"></a>
         <div id="nameFlex">
             <div id="leftBracket" class="noOpacity bracketName"></div>
                 <div id="emilerouillard">

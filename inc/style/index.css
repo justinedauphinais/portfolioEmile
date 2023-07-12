@@ -5,6 +5,11 @@
         top: 0;
         left: 0;
         height: 100vh;
+        z-index: 0;
+        display: grid;
+        width: 100vw;
+        /* grid-template-columns: repeat(12, [line2] 6.328125% [line3] 1.171875%);
+        grid-template-rows: 100vh; */
     }
     
     #index #photos {
@@ -18,17 +23,19 @@
     }
     
     #photo_02 {
-        background-image: url("../public/images/photoshoot/accueil/photo_01.jpg");
+        background-image: url("../../public/images/photoshoot/accueil/photo_01.jpg");
         background-clip: content-box;
         background-size: cover;
         width: 28.828125vw;
         height: 40vh;
+        z-index: 1;
     }
     
     #photo_01 {
-        background-image: url("../public/images/photoshoot/accueil/photo_02.jpg");
+        background-image: url("../../public/images/photoshoot/accueil/photo_02.jpg");
         background-clip: content-box;
         background-size: cover;
         width: 28.828125vw;
         height: 40vh;
+        z-index: 1;
     }

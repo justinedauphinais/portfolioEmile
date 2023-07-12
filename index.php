@@ -1,15 +1,23 @@
-<?php 
-    define('__ROOT__', dirname(dirname(__FILE__)));
+<?php session_start();
 
-    require_once(__ROOT__.'/portfolioEmile/inc/header.php');
-    require_once(__ROOT__.'/portfolioEmile/inc/nav.php');
+// Est-ce qu'un paramètre action est présent
+if (isset($_REQUEST['action'])) {
+
+    // Est-ce que l'action demandée est l'accueil
+    if ($_REQUEST['action'] == 'home') {
+        // Ajoute le controleur de Produit
+        require('controller/controllerAccueil.php');
+
+        // Appel la fonction listProduits contenu dans le controleur de Produit
+        home();
+    }
+}
+else {
+    // Ajoute le controleur de Produit
+    require('controller/controllerAccueil.php');
+    
+    // Appel la fonction listProduits contenu dans le controleur de Produit
+    home();
+}
+
 ?>
-
-<main id="index">
-    <div id="photos">
-        <div id="photo_01"></div>
-        <div id="photo_02"></div>
-    </div>
-</main>
-
-<?php require_once(__ROOT__.'/portfolioEmile/inc/footer.php'); ?>
