@@ -1,0 +1,231 @@
+:root {
+    /* Colors: */
+    --fond: #F8F8F8;
+    --orange: #EB4225;
+    --noir: #05050500;
+    --survol: #00FFEB;
+    --black: #000000;
+}
+
+.orange {
+    color: var(--orange) !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/******** General ********/
+
+.noOpacity {
+    opacity: 0;
+}
+
+/******** Animations ********/
+
+.fadeOut {
+    animation: fadeOut 0.2s forwards;
+}
+
+.fadeIn {
+    animation: fadeIn 0.2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/******** Header ********/
+#index {
+    
+}
+
+    /* Name */
+#nameButton {
+    margin: 1.878vh calc(2vw + 2.578125vw + 0.398vw);
+    height: 11.94vh;
+    width: 75.9375vw;
+    position: absolute;
+    top: 0;
+    background-color: #EB4225;
+}
+
+#nameFlex {
+    display: flex;
+    margin: 1.878vh 2vw 0 2vw;
+    gap: 0.398vw;
+}
+
+#emilerouillard {
+    height: 11.94vh;
+    margin: auto;
+    display: flex;
+    max-width: 1425px;
+}
+
+#name1 {
+    width: 14.53vw;
+    max-width: 207.05px;
+    height: 11.94vh;
+    background-image: url("../public/images/emileRouillard/em.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 1.32vw;
+}
+
+#name2 {
+    width: 30.82vw;
+    max-width: 439.17px;
+    height: 11.94vh;
+    background-image: url("../public/images/emileRouillard/ile.ro.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 0.90vw;
+}
+
+#name3 {
+    width: 6.02vw;
+    max-width: 85.78px;
+    height: 11.94vh;
+    background-image: url("../public/images/emileRouillard/u.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 1.32vw;
+}
+
+#name4 {
+    width: 26.99vw;
+    max-width: 384.594px;
+    height: 11.94vh;
+    background-image: url("../public/images/emileRouillard/illar.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 0.90vw;
+}
+
+#name5 {
+    width: 6.33vw;
+    max-width: 90.19px;
+    height: 11.94vh;
+    background-image: url("../public/images/emileRouillard/d.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#leftBracket {
+    width: 2.578125vw;
+    height: 11.94vh;
+    background-image: url("../public/images/parenthese-01.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#rightBracket {
+    width: 2.578125vw;
+    height: 11.94vh;
+    background-image: url("../public/images/parenthese-02.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+    /* Links */
+#socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4861111vh;
+}
+
+#socials a {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--black);
+}
+
+#behance {
+    margin-top: 1px;
+}
+
+#behanceBracketRight {
+    color: var(--orange);
+}
+
+#behanceBracketLeft {
+    position: absolute;
+    left: calc(2vw + 2.578125vw + 0.398vw + 0.460326vw - 5.33px);
+    color: var(--orange);
+}
+
+#linkedin {
+    margin-top: 1px;
+}
+
+#linkedinBracketRight {
+    color: var(--orange);
+}
+
+#linkedinBracketLeft {
+    position: absolute;
+    left: calc(2vw + 2.578125vw + 0.398vw + 0.460326vw - 5.33px);
+    color: var(--orange);
+}
+
+#instagram {
+    margin-top: 1px;
+}
+
+#instagramBracketRight {
+    color: var(--orange);
+}
+
+#instagramBracketLeft {
+    position: absolute;
+    left: calc(2vw + 2.578125vw + 0.398vw + 0.460326vw - 5.33px);
+    color: var(--orange);
+}
+
+#socialLine {
+    display: flex;
+    align-items: center;
+}
+
+#email {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/******** Navigation ********/
+    /* Position */
+nav {
+    position: absolute;
+    bottom: 4.375vh;
+    left: calc(2vw + 2.578125vw + 0.398vw + 0.460326vw);
+    display: flex;
+    gap: 50px;
+}
+
+nav a {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--black);
+}
