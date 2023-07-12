@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inc/style/general.css">
     <link rel="stylesheet" href="inc/style/header.css">
     <link rel="stylesheet" href="inc/style/index.css">
+    <link rel="stylesheet" href="inc/style/aPropos.css">
     <script src="inc/script/header.js" defer></script>
     <link rel="stylesheet" href="https://use.typekit.net/jtd1rom.css">
     <title>Emile Rouillard</title>

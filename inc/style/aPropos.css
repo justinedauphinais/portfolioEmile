@@ -1,7 +1,32 @@
-#photo_01 {
-
+#aPropos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
-#paragraph {
+#aPropos #photo_01 {
+    background-image: url("../../public/images/photoshoot/accueil/photo_01.jpg");
+    background-clip: content-box;
+    background-size: cover;
+    position: absolute;
+    bottom: 11.5vh;
+    left: calc(2vw + 0.398vw + 2.578125vw);
+    width: 33.28125vw;
+    height: 33.515625vw;
+    max-width: 541px;
+    max-height: 545px;
+}
 
+#aPropos #paragraph {
+    display: flex;
+    align-items: end;
+    position: absolute;
+    bottom: 11.5vh;
+    right: calc(2vw + 5vw);
+    width: 34.12vw;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: roc-grotesk, sans-serif;
 }

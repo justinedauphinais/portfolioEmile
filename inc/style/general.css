@@ -1,0 +1,52 @@
+:root {
+    /* Colors: */
+    --fond: #F8F8F8;
+    --orange: #EB4225;
+    --noir: #05050500;
+    --survol: #00FFEB;
+    --black: #000000;
+}
+
+.orange {
+    color: var(--orange) !important;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/******** General ********/
+
+.noOpacity {
+    opacity: 0;
+}
+
+/******** Animations ********/
+
+.fadeOut {
+    animation: fadeOut 0.2s forwards;
+}
+
+.fadeIn {
+    animation: fadeIn 0.2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+}

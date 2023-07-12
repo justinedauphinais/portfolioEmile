@@ -22,7 +22,7 @@
         justify-content: space-between;
     }
     
-    #photo_02 {
+    #index #photo_02 {
         background-image: url("../../public/images/photoshoot/accueil/photo_01.jpg");
         background-clip: content-box;
         background-size: cover;
@@ -31,7 +31,7 @@
         z-index: 1;
     }
     
-    #photo_01 {
+    #index #photo_01 {
         background-image: url("../../public/images/photoshoot/accueil/photo_02.jpg");
         background-clip: content-box;
         background-size: cover;

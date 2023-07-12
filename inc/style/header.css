@@ -1,56 +1,3 @@
-:root {
-    /* Colors: */
-    --fond: #F8F8F8;
-    --orange: #EB4225;
-    --noir: #05050500;
-    --survol: #00FFEB;
-    --black: #000000;
-}
-
-.orange {
-    color: var(--orange) !important;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/******** General ********/
-
-.noOpacity {
-    opacity: 0;
-}
-
-/******** Animations ********/
-
-.fadeOut {
-    animation: fadeOut 0.2s forwards;
-}
-
-.fadeIn {
-    animation: fadeIn 0.2s forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 100;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 100;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
 /******** Header ********/
     /* Name */
 #nameButton {
@@ -79,13 +26,13 @@
 
 #emilerouillard > div:first-of-type {
     width: 16.35883905%;
-    min-height: 11.94vh;
+    height: 7vw;
     margin-right: 1.32vw;
 }
 
 #name1 {
     width: 100%;
-    height: 100%;
+    height: 7vw;
     background-image: url("../../public/images/emileRouillard/em.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -94,13 +41,13 @@
 
 #emilerouillard > div:nth-of-type(2) {
     width: 34.696569921%;
-    min-height: 11.94vh;
+    height: 7vw;
     margin-right: 0.90vw;
 }
 
 #name2 {
     width: 100%;
-    height: 100%;
+    height: 7vw;
     background-image: url("../../public/images/emileRouillard/ile.ro.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -109,13 +56,13 @@
 
 #emilerouillard > div:nth-of-type(3) {
     width: 6.77220756376%;
-    min-height: 11.94vh;
+    height: 7vw;
     margin-right: 1.32vw;
 }
 
 #name3 {
     width: 100%;
-    height: 100%;
+    height: 7vw;
     background-image: url("../../public/images/emileRouillard/u.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -123,13 +70,13 @@
 
 #emilerouillard > div:nth-of-type(4) {
     width: 30.38698328936%;
-    min-height: 11.94vh;
+    height: 7vw;
     margin-right: 0.90vw;
 }
 
 #name4 {
     width: 100%;
-    height: 100%;
+    height: 7vw;
     background-image: url("../../public/images/emileRouillard/illar.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -137,13 +84,13 @@
 
 #emilerouillard > div:nth-of-type(5) {
     width: 7.12401055409%;
-    min-height: 11.94vh;
+    height: 7vw;
     margin-right: 0.90vw;
 }
 
 #name5 {
     width: 100%;
-    height: 100%;
+    height: 7vw;
     background-image: url("../../public/images/emileRouillard/d.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -185,11 +132,14 @@
 
 #behanceBracketRight {
     color: var(--orange);
+    position: relative;
+    top: -1px;
 }
 
 #behanceBracketLeft {
-    position: absolute;
-    left: calc(2vw + 2.578125vw + 0.398vw + 0.460326vw - 5.33px);
+    position: relative;
+    left: -79px;
+    top: -1px;
     color: var(--orange);
 }
 
@@ -199,11 +149,14 @@
 
 #linkedinBracketRight {
     color: var(--orange);
+    position: relative;
+    top: -1px;
 }
 
 #linkedinBracketLeft {
-    position: absolute;
-    left: calc(2vw + 2.578125vw + 0.398vw + 0.460326vw - 5.33px);
+    position: relative;
+    left: -71px;
+    top: -1px;
     color: var(--orange);
 }
 
@@ -213,11 +166,14 @@
 
 #instagramBracketRight {
     color: var(--orange);
+    position: relative;
+    top: -1px;
 }
 
 #instagramBracketLeft {
-    position: absolute;
-    left: calc(2vw + 2.578125vw + 0.398vw + 0.460326vw - 5.33px);
+    position: relative;
+    left: -91px;
+    top: -1px;
     color: var(--orange);
 }
 
@@ -238,7 +194,7 @@
 nav {
     position: absolute;
     bottom: 4.375vh;
-    left: calc(2vw + 2.578125vw + 0.398vw + 0.460326vw);
+    left: calc(2vw + 0.398vw + 2.578125vw);
     display: flex;
     gap: 50px;
     z-index: 99;
