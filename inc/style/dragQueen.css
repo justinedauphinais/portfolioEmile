@@ -1,0 +1,25 @@
+/******** Drag Queen ********/
+#dragQueen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 60vh;
+    padding-left: calc(2vw + 0.398vw + 2.578125vw);
+}
+
+    /* sections */
+#dragQueen section {
+    width: calc(100vw - (2vw + 0.398vw + 3vw) * 2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#dragQueen #photo_01 {
+    background-image: url("../../public/images/photoshoot/accueil/photo_02.jpg");
+    background-clip: content-box;
+    background-size: cover;
+    width: 58.828125vw;
+    height: 80vh;
+    z-index: 1;
+}

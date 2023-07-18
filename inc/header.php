@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="inc/style/general.css">
     <link rel="stylesheet" href="inc/style/header.css">
     <link rel="stylesheet" href="inc/style/index.css">
+    <link rel="stylesheet" href="inc/style/dragQueen.css">
     <link rel="stylesheet" href="inc/style/aPropos.css">
     <script src="inc/script/header.js" defer></script>
     <link rel="stylesheet" href="https://use.typekit.net/jtd1rom.css">
@@ -13,7 +14,6 @@
 </head>
 <body>
     <header>
-        <a href="aPropos.php" id="nameButton"></a>
         <div id="nameFlex">
             <div id="leftBracket" class="noOpacity bracketName"></div>
                 <div id="emilerouillard">
@@ -47,4 +47,5 @@
                 </div>
             <div id="rightBracket" class="noOpacity bracketName"></div>
         </div>
+        <a href="aPropos.php" id="nameButton"></a>
     </header>

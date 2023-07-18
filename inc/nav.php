@@ -1,6 +1,6 @@
 <nav>
-    <a href="#">accueil</a>
+    <a href="index.php">accueil</a>
     <a href="#">action</a>
     <a href="#">mode</a>
-    <a href="#">drag queen</a>
+    <a href="dragQueen.php">drag queen</a>
 </nav>

@@ -1,11 +1,12 @@
 /******** Header ********/
     /* Name */
 #nameButton {
-    margin: 1.878vh 0 0 calc(2vw + 0.398vw + 2.578125vw);
+    display: block;
+    margin: 0 0 0 calc(2vw + 0.398vw + 2.578125vw);
     height: 7vw;
     width: calc(100vw - 6.7578125vw - 3.1vw);
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -7vw;
     z-index: 99;
 }
 
