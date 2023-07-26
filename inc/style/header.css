@@ -11,6 +11,7 @@
 }
 
 #nameFlex {
+    top: 0;
     display: flex;
     margin: 1.878vh 2vw 0 2vw;
     gap: 0.398vw;

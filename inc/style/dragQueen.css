@@ -5,6 +5,8 @@
     left: 0;
     margin-top: 60vh;
     padding-left: calc(2vw + 0.398vw + 2.578125vw);
+    height: calc(100vh - 60vh);
+    overflow: hidden;
 }
 
     /* sections */
@@ -13,13 +15,150 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 15vh;
+}
+
+#dragQueen section:first-of-type {
+    margin-top: 0;
 }
 
 #dragQueen #photo_01 {
-    background-image: url("../../public/images/photoshoot/accueil/photo_02.jpg");
+    background-image: url("../../public/images/photoshoot/drag/01.jpg");
     background-clip: content-box;
     background-size: cover;
     width: 58.828125vw;
-    height: 80vh;
+    height: 79vh;
     z-index: 1;
+}
+
+#dragQueen #photo_02 {
+    background-image: url("../../public/images/photoshoot/drag/02.jpg");
+    background-clip: content-box;
+    background-size: cover;
+    width: 58.828125vw;
+    height: 79vh;
+    z-index: 1;
+}
+
+#dragQueen #photo_03 {
+    background-image: url("../../public/images/photoshoot/drag/03.jpg");
+    background-clip: content-box;
+    background-size: cover;
+    width: 58.828125vw;
+    height: 79vh;
+    z-index: 1;
+}
+
+    /* vertical carousel */
+.scrollIntoView {
+    animation: scrollIntoViewAn 0.5s forwards;
+}
+
+@keyframes scrollIntoViewAn {
+    from {
+        margin-top: 60vh;
+    }
+    to {
+        margin-top: 16vh;
+        height: calc(100vh - 16vh);
+    }
+}
+
+.scrollOutOfView {
+    animation: scrollOutOfViewAn 0.5s forwards;
+}
+
+@keyframes scrollOutOfViewAn {
+    from {
+        margin-top: 16vh;
+        height: calc(100vh - 16vh);
+    }
+    to {
+        margin-top: 60vh;
+    }
+}
+
+.scrollDownOnePage {
+    animation: scrollOnePageAn 0.75s forwards;
+}
+
+@keyframes scrollOnePageAn {
+    from {
+        margin-top: 16vh;
+        height: calc(100vh - 16vh);
+    }
+    to {
+        margin-top: -78vh;
+        height: calc(100vh + 78vh);
+    }
+}
+
+.scrollUpOnePage {
+    animation: scrollUpOnePageAn 0.75s forwards;
+}
+
+@keyframes scrollUpOnePageAn {
+    from {
+        margin-top: -78vh;
+        height: calc(100vh + 78vh);
+    }
+    to {
+        margin-top: 16vh;
+        height: calc(100vh - 16vh);
+    }
+}
+
+.scrollDownTwoPage {
+    animation: scrollTwoPageAn 0.75s forwards;
+}
+
+@keyframes scrollTwoPageAn {
+    from {
+        margin-top: -78vh;
+        height: calc(100vh + 78vh);
+    }
+    to {
+        margin-top: -172vh;
+        height: calc(100vh + 172vh);
+    }
+}
+
+.scrollUpTwoPage {
+    animation: scrollUpTwoPageAn 0.75s forwards;
+}
+
+@keyframes scrollUpTwoPageAn {
+    from {
+        margin-top: -172vh;
+        height: calc(100vh + 172vh);
+    }
+    to {
+        margin-top: -78vh;
+        height: calc(100vh + 78vh);
+    }
+}
+
+    /* scrollOutNav */
+
+.scrollOutOfPage {
+    animation: scrollOutOfPageAn 0.5s forwards;
+}
+
+@keyframes scrollOutOfPageAn {
+    to {
+        margin-top: -65vh;
+    }
+}
+
+.scrollIntoPage {
+    animation: scrollIntoPageAn 0.5s forwards;
+}
+
+@keyframes scrollIntoPageAn {
+    from {
+        margin-top: -65vh;
+    }
+    to {
+        margin-top: min(22.24px, 1.54444444vh);
+    }
 }

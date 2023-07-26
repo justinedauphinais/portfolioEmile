@@ -8,11 +8,11 @@
     </section>
     <section id="1" class="queenPhotos">
         <p>model : Lady Boom Boom</p>
-        <div id="photo_01"></div>
+        <div id="photo_02"></div>
     </section>
     <section id="2" class="queenPhotos">
         <p>model : Lady Boom Boom</p>
-        <div id="photo_01"></div>
+        <div id="photo_03"></div>
     </section>
 </main>
 
