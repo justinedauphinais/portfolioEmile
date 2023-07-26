@@ -1,3 +1,5 @@
+<?php $baseURL = "/portfolioEmile/"?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +15,20 @@
     <link rel="stylesheet" href="https://use.typekit.net/jtd1rom.css">
     <title>Emile Rouillard</title>
 </head>
+
+<?php require_once('inc/setup_langue.php'); ?>
+
 <body>
+    <aside>
+        <ul>
+            <?php 
+                $url = substr($_SERVER['REQUEST_URI'], 0, strpos($_SERVER['REQUEST_URI'], "?"));
+            ?>
+
+            <li><a href="<?= $url;?>?langue=en">English</li>
+            <li><a href="<?= $url;?>?langue=fr">Français</li>
+        </ul>
+    </aside>
     <header>
         <div id="nameFlex">
             <div id="leftBracket" class="noOpacity bracketName"></div>

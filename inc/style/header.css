@@ -143,7 +143,7 @@
 
 #behanceBracketLeft {
     position: relative;
-    left: -79px;
+    left: -78px;
     top: -1px;
     color: var(--orange);
 }
@@ -243,6 +243,13 @@ nav a {
     color: var(--orange);
 }
 
+#accueilBracketLeftEn {
+    position: relative;
+    left: -55px;
+    top: -2px;
+    color: var(--orange);
+}
+
 #actionBracketRight {
     color: var(--orange);
     position: relative;
@@ -252,7 +259,7 @@ nav a {
 
 #actionBracketLeft {
     position: relative;
-    left: -60px;
+    left: -59px;
     top: -2px;
     color: var(--orange);
 }
@@ -283,4 +290,22 @@ nav a {
     left: -101px;
     top: -2px;
     color: var(--orange);
+}
+
+/******** Languages ********/
+    /* Position */
+aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+aside ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1em;
+}
+
+aside ul li {
+    text-decoration: none;
 }
