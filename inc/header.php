@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="inc/style/dragQueen.css">
     <link rel="stylesheet" href="inc/style/aPropos.css">
     <script src="inc/script/header.js" defer></script>
+    <script src="inc/script/dragQueen.js" defer></script>
     <link rel="stylesheet" href="https://use.typekit.net/jtd1rom.css">
     <title>Emile Rouillard</title>
 </head>

@@ -2,11 +2,19 @@ var bracketsName = document.querySelectorAll("div.bracketName");
 var bracketBehance = document.querySelectorAll("p.bracketBehance");
 var bracketLinkedin = document.querySelectorAll("p.bracketLinkedin");
 var bracketInstagram = document.querySelectorAll("p.bracketInstagram");
+var bracketAccueil = document.querySelectorAll("p.bracketAccueil");
+var bracketAction = document.querySelectorAll("p.bracketAction");
+var bracketMode = document.querySelectorAll("p.bracketMode");
+var bracketDragQueen = document.querySelectorAll("p.bracketDragQueen");
 
 var emileRouillard = document.getElementById("nameButton");
 var behance = document.getElementById("behance");
 var linkedin = document.getElementById("linkedin");
 var instagram = document.getElementById("instagram");
+var accueil = document.getElementById("accueil");
+var action = document.getElementById("action");
+var mode = document.getElementById("mode");
+var dragQueen = document.getElementById("dragQueenLink");
 
 emileRouillard.addEventListener("mouseover", () => {
     bracketsName.forEach(bracket => {
@@ -26,7 +34,6 @@ behance.addEventListener("mouseover", () => {
     bracketBehance.forEach(bracket => {
         bracket.classList.remove("noOpacity");
         bracket.classList.add("fadeIn");
-        behance.classList.add("orange");
     });
 });
 
@@ -34,7 +41,6 @@ behance.addEventListener("mouseout", () => {
     bracketBehance.forEach(bracket => {
         bracket.classList.remove("fadeIn");
         bracket.classList.add("fadeOut");
-        behance.classList.remove("orange");
     });
 });
 
@@ -42,7 +48,6 @@ linkedin.addEventListener("mouseover", () => {
     bracketLinkedin.forEach(bracket => {
         bracket.classList.remove("noOpacity");
         bracket.classList.add("fadeIn");
-        linkedin.classList.add("orange");
     });
 });
 
@@ -50,7 +55,6 @@ linkedin.addEventListener("mouseout", () => {
     bracketLinkedin.forEach(bracket => {
         bracket.classList.remove("fadeIn");
         bracket.classList.add("fadeOut");
-        linkedin.classList.remove("orange");
     });
 });
 
@@ -58,7 +62,6 @@ instagram.addEventListener("mouseover", () => {
     bracketInstagram.forEach(bracket => {
         bracket.classList.remove("noOpacity");
         bracket.classList.add("fadeIn");
-        instagram.classList.add("orange");
     });
 });
 
@@ -66,6 +69,61 @@ instagram.addEventListener("mouseout", () => {
     bracketInstagram.forEach(bracket => {
         bracket.classList.remove("fadeIn");
         bracket.classList.add("fadeOut");
-        instagram.classList.remove("orange");
+    });
+});
+
+accueil.addEventListener("mouseover", () => {
+    bracketAccueil.forEach(bracket => {
+        bracket.classList.remove("noOpacity");
+        bracket.classList.add("fadeIn");
+    });
+});
+
+accueil.addEventListener("mouseout", () => {
+    bracketAccueil.forEach(bracket => {
+        bracket.classList.remove("fadeIn");
+        bracket.classList.add("fadeOut");
+    });
+});
+
+action.addEventListener("mouseover", () => {
+    bracketAction.forEach(bracket => {
+        bracket.classList.remove("noOpacity");
+        bracket.classList.add("fadeIn");
+    });
+});
+
+action.addEventListener("mouseout", () => {
+    bracketAction.forEach(bracket => {
+        bracket.classList.remove("fadeIn");
+        bracket.classList.add("fadeOut");
+    });
+});
+
+mode.addEventListener("mouseover", () => {
+    bracketMode.forEach(bracket => {
+        bracket.classList.remove("noOpacity");
+        bracket.classList.add("fadeIn");
+    });
+});
+
+mode.addEventListener("mouseout", () => {
+    bracketMode.forEach(bracket => {
+        bracket.classList.remove("fadeIn");
+        bracket.classList.add("fadeOut");
+    });
+});
+
+dragQueen.addEventListener("mouseover", () => {
+    bracketDragQueen.forEach(bracket => {
+        bracket.classList.remove("noOpacity");
+        bracket.classList.add("fadeIn");
+    });
+});
+
+dragQueen.addEventListener("mouseout", () => {
+    bracketDragQueen.forEach(bracket => {
+        bracket.classList.remove("fadeIn");
+        bracket.classList.add("fadeOut");
     });
 });
