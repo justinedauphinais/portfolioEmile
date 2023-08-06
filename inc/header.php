@@ -57,9 +57,19 @@
                         <div id="name2"></div>
                         <p id="email">emile.graphiste@gmail.com</p>
                     </div>
-                    <div id="name3"></div>
-                    <div id="name4"></div>
-                    <div id="name5"></div>
+                    <div id="serviceDiv">
+                        <div id="name3"></div>
+                        <p id="service" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>>service</p>
+                    </div>
+                    <div id="othersDiv">
+                        <div id="name4"></div>
+                        <p id="design" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>>désign graphique</p>
+                        <p id="photographie" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>>photographie</p>
+                    </div>
+                    <div id="contactDiv">
+                        <div id="name5"></div>
+                        <p id="contact" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>>me contactez</p>
+                    </div>
                 </div>
             <div id="rightBracket" class="noOpacity bracketName"></div>
         </div>
