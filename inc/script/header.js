@@ -127,3 +127,11 @@ dragQueen.addEventListener("mouseout", () => {
         bracket.classList.add("fadeOut");
     });
 });
+
+// Modale
+var modale = document.getElementById("contactModal");
+var contact = document.getElementById("contact");
+
+contact.addEventListener("click", () => {
+    modale.classList.toggle("hide");
+});

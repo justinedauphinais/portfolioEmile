@@ -246,6 +246,76 @@
     margin-top: min(22.24px, 1.54444444vh);
 }
 
+    /* Modale */
+#contactModal {
+    position: absolute;
+    top: calc(7vw + 1.878vh + min(22.24px, 1.54444444vh) + 1.4861111vh);
+    right: calc(2vw + 0.85vw + 2.578125vw);
+    width: 25.8203125vw;
+    height: calc((535 / 661) * 25.8203125vw);
+    background: var(--orange) 0% 0% no-repeat padding-box;
+    padding: calc((30.65 / 661) * 25.8203125vw);
+    z-index: 99;
+}
+
+#contactModal > div {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#contactModal label {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: calc(26px/42px);
+    margin-bottom: 5px;
+}
+
+#contactModal > div > input {
+    background-color: var(--orange);
+    border: none;
+    border-bottom: rgba(255, 255, 255, 0.5) 1px solid;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 35px;
+    color: white;
+}
+
+#modalEmail, #modalMessage {
+    margin-top: 10px;
+}
+
+#contactModal > div > textarea {
+    background-color: var(--orange);
+    border: rgba(255, 255, 255, 0.5) 1px solid;
+    resize: none;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    padding: 10px;
+    height: calc(((535 / 661) * 25.8203125vw) - 16px - 16px - 16px - 35px - 35px - calc((30.65 / 661) * 25.8203125vw) - calc((30.65 / 661) * 25.8203125vw) - 35px - 20px);
+}
+
+#contactModal button {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: calc(26px/42px);
+    color: white;
+    background-color: var(--orange);
+    border: none;
+    width: 70px;
+}
+
+#contactModal #modalButton {
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 10px;
+}
+
 /******** Navigation ********/
     /* Position */
 nav {

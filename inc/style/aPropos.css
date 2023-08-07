@@ -1,11 +1,3 @@
-#aPropos {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
 #aPropos #photo_01 {
     background-image: url("../../public/images/photoshoot/accueil/photo_01.jpg");
     background-clip: content-box;

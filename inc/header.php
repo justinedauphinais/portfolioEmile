@@ -63,15 +63,35 @@
                     </div>
                     <div id="othersDiv">
                         <div id="name4"></div>
-                        <p id="design" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>>désign graphique</p>
-                        <p id="photographie" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>>photographie</p>
+                        <p id="design" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>><?php echo ($_SESSION['langue'] == "fr" )?"désign graphique":"graphic design" ?></p>
+                        <p id="photographie" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>><?php echo ($_SESSION['langue'] == "fr" )?"photographie":"photography" ?></p>
                     </div>
                     <div id="contactDiv">
                         <div id="name5"></div>
-                        <p id="contact" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>>me contactez</p>
+                        <p id="contact" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>><?php echo ($_SESSION['langue'] == "fr" )?"me contactez":"contact me" ?></p>
                     </div>
                 </div>
             <div id="rightBracket" class="noOpacity bracketName"></div>
         </div>
         <a href="aPropos.php" id="nameButton"></a>
     </header>
+
+    <div id="contactModal" class="hide">
+        <div id="modalNom">
+            <label>
+                <?php echo ($_SESSION['langue'] == "fr" )?"nom":"name" ?>
+            </label>
+            <input id="nomInput" type="text" />
+        </div>
+        <div id="modalEmail">
+            <label>email</label>
+            <input id="emailInput" type="text" />
+        </div>
+        <div id="modalMessage">
+            <label>message</label>
+            <textarea id="messageInput"></textarea>
+        </div>
+        <div id="modalButton">
+            <button><?php echo ($_SESSION['langue'] == "fr" )?"envoyer":"send" ?> →</button>
+        </div>
+    </div>
