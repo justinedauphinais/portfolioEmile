@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="inc/style/dragQueen.css">
     <link rel="stylesheet" href="inc/style/aPropos.css">
     <script src="inc/script/header.js" defer></script>
+    <script src="inc/script/form.js" defer></script>
     <script src="inc/script/dragQueen.js" defer></script>
     <link rel="stylesheet" href="https://use.typekit.net/jtd1rom.css">
     <title>Emile Rouillard</title>
@@ -76,22 +77,22 @@
         <a href="aPropos.php" id="nameButton"></a>
     </header>
 
-    <div id="contactModal" class="hide">
+    <form id="contactModal" class="hide">
         <div id="modalNom">
             <label>
                 <?php echo ($_SESSION['langue'] == "fr" )?"nom":"name" ?>
             </label>
-            <input id="nomInput" type="text" />
+            <input id="nomInput" type="text" name="subject" />
         </div>
         <div id="modalEmail">
             <label>email</label>
-            <input id="emailInput" type="text" />
+            <input id="emailInput" type="text" name="reply_to" />
         </div>
         <div id="modalMessage">
             <label>message</label>
-            <textarea id="messageInput"></textarea>
+            <textarea id="messageInput" name="text"></textarea>
         </div>
         <div id="modalButton">
-            <button><?php echo ($_SESSION['langue'] == "fr" )?"envoyer":"send" ?> →</button>
+            <button type="submit" id="sendButton"><?php echo ($_SESSION['langue'] == "fr" )?"envoyer":"send" ?> →</button>
         </div>
-    </div>
+    </form>
