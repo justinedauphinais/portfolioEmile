@@ -55,7 +55,7 @@ function myFunction(evt) {
 
             timer = setTimeout(() => {
                 timer = null;
-            },  400);
+            },  2000);
         }
     }
 }

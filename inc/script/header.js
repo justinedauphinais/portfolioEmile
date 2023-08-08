@@ -133,5 +133,13 @@ var modale = document.getElementById("contactModal");
 var contact = document.getElementById("contact");
 
 contact.addEventListener("click", () => {
-    modale.classList.toggle("hide");
+    modale.classList.remove("hide");
+    if (modale.classList.contains("modaleAppear")) {
+        modale.classList.add("modaleDisappear");
+        modale.classList.remove("modaleAppear");
+    }
+    else {
+        modale.classList.add("modaleAppear");
+        modale.classList.remove("modaleDisappear");
+    }
 });
