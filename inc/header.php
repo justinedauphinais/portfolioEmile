@@ -36,27 +36,29 @@
                 <div id="emilerouillard">
                     <div>
                         <div id="name1"></div>
-                        <div id="socials">
-                            <div id="socialLine">
-                                <a id="behance" href="https://www.behance.net/Emile_Rouillard" target="_blank">behance</a>
-                                <p id="behanceBracketRight" class="noOpacity bracketBehance">)</p>
-                                <p id="behanceBracketLeft" class="noOpacity bracketBehance">(</p>
-                            </div>
-                            <div id="socialLine">
-                                <a id="linkedin" href="https://www.linkedin.com/in/emile-rouillard/" target="_blank">linkedin</a>
-                                <p id="linkedinBracketRight" class="noOpacity bracketLinkedin">)</p>
-                                <p id="linkedinBracketLeft" class="noOpacity bracketLinkedin">(</p>
-                            </div>
-                            <div id="socialLine">
-                                <a id="instagram" href="https://www.instagram.com/emilerouillard_photographe/" target="_blank">instagram</a>
-                                <p id="instagramBracketRight" class="noOpacity bracketInstagram">)</p>
-                                <p id="instagramBracketLeft" class="noOpacity bracketInstagram">(</p>
+                        <div id="socials" style="--height: 75px;">
+                            <div id="socialsInnerDiv">
+                                <div id="socialLine">
+                                    <a id="behance" href="https://www.behance.net/Emile_Rouillard" target="_blank">behance</a>
+                                    <p id="behanceBracketRight" class="noOpacity bracketBehance">)</p>
+                                    <p id="behanceBracketLeft" class="noOpacity bracketBehance">(</p>
+                                </div>
+                                <div id="socialLine">
+                                    <a id="linkedin" href="https://www.linkedin.com/in/emile-rouillard/" target="_blank">linkedin</a>
+                                    <p id="linkedinBracketRight" class="noOpacity bracketLinkedin">)</p>
+                                    <p id="linkedinBracketLeft" class="noOpacity bracketLinkedin">(</p>
+                                </div>
+                                <div id="socialLine">
+                                    <a id="instagram" href="https://www.instagram.com/emilerouillard_photographe/" target="_blank">instagram</a>
+                                    <p id="instagramBracketRight" class="noOpacity bracketInstagram">)</p>
+                                    <p id="instagramBracketLeft" class="noOpacity bracketInstagram">(</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div>
                         <div id="name2"></div>
-                        <p id="email">emile.graphiste@gmail.com</p>
+                        <p id="email"  style="--height: 16px;">emile.graphiste@gmail.com</p>
                     </div>
                     <div id="serviceDiv">
                         <div id="name3"></div>

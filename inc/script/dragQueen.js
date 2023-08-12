@@ -1,53 +1,81 @@
-var currentPhoto = -1;
+var photoshoots = {
+    0: "b_",
+    1: "f_",
+    2: "s_"
+};
+var maxPhotoshoots = 2;
+
+var numOfPhotos = {
+    0: 3,
+    1: 1,
+    2: 1
+};
+
+var currentPhotoVertical = -1;
+var currentPhotoHorizontal = {
+    0: 0,
+    1: 0,
+    2: 0
+};
+
 var dragQueen = document.getElementById("dragQueen");
 var timer = null;
 hasScrolled = false;
+var boomboomPhotos = document.querySelectorAll(".boomboomPhotos");
+var socials = document.getElementById("socials");
+var socialsInnerDiv = document.getElementById("socialsInnerDiv");
+var email = document.getElementById("email");
 
-window.onwheel = function() {myFunction(event)};
 
-function myFunction(evt) {
+window.onwheel = function() {verticalCarousel(event)};
+
+function verticalCarousel(evt) {
     if (window.location.href.includes("dragQueen")) {
         if (timer == null) {
             if (evt.deltaY < 0) {
-                if (currentPhoto != -1) {
-                    currentPhoto -= 1;
+                if (currentPhotoVertical != -1) {
+                    currentPhotoVertical -= 1;
                 }
 
-                if (currentPhoto == 1) {
+                if (currentPhotoVertical == 1) {
                     dragQueen.classList = "";
                     dragQueen.classList.add("scrollUpTwoPage");
                 }
-                else if (currentPhoto == 0) {
+                else if (currentPhotoVertical == 0) {
                     dragQueen.classList = "";
                     dragQueen.classList.add("scrollUpOnePage");
                 }
-                else if (currentPhoto == -1 && document.getElementById("email").classList.contains("scrollOutOfPage")) {
+                else if (currentPhotoVertical == -1 && document.getElementById("email").classList.contains("scrollOutOfPage")) {
                     dragQueen.classList = "";
                     dragQueen.classList.add("scrollOutOfView");
-                    document.getElementById("email").classList.remove("scrollOutOfPage");
-                    document.getElementById("socials").classList.remove("scrollOutOfPage");
-                    document.getElementById("email").classList.add("scrollIntoPage");
-                    document.getElementById("socials").classList.add("scrollIntoPage");
+                    email.classList.remove("scrollOutOfPage");
+                    socials.classList.remove("scrollOutOfPage");
+                    socialsInnerDiv.classList.remove("scrollOutOfPageInnerDiv");
+                    email.classList.add("scrollIntoPage");
+                    socials.classList.add("scrollIntoPage");
+                    socialsInnerDiv.classList.add("scrollIntoPageInnerDiv");
                 }
             }
             if (evt.deltaY > 0) {
-                if (currentPhoto != 2) {
-                    currentPhoto += 1;
+                if (currentPhotoVertical != 2) {
+                    currentPhotoVertical += 1;
                 }
 
-                if (currentPhoto == 0) {
+                if (currentPhotoVertical == 0) {
                     dragQueen.classList = "";
                     dragQueen.classList.add("scrollIntoView");
-                    document.getElementById("email").classList.remove("scrollIntoPage");
-                    document.getElementById("socials").classList.remove("scrollIntoPage");
-                    document.getElementById("email").classList.add("scrollOutOfPage");
-                    document.getElementById("socials").classList.add("scrollOutOfPage");
+                    email.classList.remove("scrollIntoPage");
+                    socials.classList.remove("scrollIntoPage");
+                    socialsInnerDiv.classList.remove("scrollIntoPageInnerDiv");
+                    email.classList.add("scrollOutOfPage");
+                    socials.classList.add("scrollOutOfPage");
+                    socialsInnerDiv.classList.add("scrollOutOfPageInnerDiv");
                 }
-                else if (currentPhoto == 1) {
+                else if (currentPhotoVertical == 1) {
                     dragQueen.classList = "";
                     dragQueen.classList.add("scrollDownOnePage");
                 }
-                else if (currentPhoto == 2) {
+                else if (currentPhotoVertical == 2) {
                     dragQueen.classList = "";
                     dragQueen.classList.add("scrollDownTwoPage");
                 }
@@ -55,7 +83,32 @@ function myFunction(evt) {
 
             timer = setTimeout(() => {
                 timer = null;
-            },  2000);
+            },  1000);
         }
     }
+}
+
+boomboomPhotos.forEach(photo => {
+    photo.onclick = function() {horizontalCarousel(event)};
+})
+
+function horizontalCarousel(evt) {
+    if (currentPhotoVertical == -1) 
+        return;
+
+    var numPhoto = currentPhotoHorizontal[currentPhotoVertical] + 1;
+    var photo1 = document.getElementById(photoshoots[currentPhotoVertical] + "0" + numPhoto);
+    console.log(photoshoots[currentPhotoVertical] + "0" + numPhoto + 1);
+
+    if (numPhoto > numOfPhotos[currentPhotoVertical] - 1) {
+        numPhoto = 0;
+    }
+
+    currentPhotoHorizontal[currentPhotoVertical] = numPhoto;
+    numPhoto = numPhoto + 1;
+    var photo2 = document.getElementById(photoshoots[currentPhotoVertical] + "0" + numPhoto);
+    console.log(photoshoots[currentPhotoVertical] + "0" + numPhoto);
+
+    photo1.classList = "scrollOutLeft";
+    photo2.classList = "scrollInRight";
 }

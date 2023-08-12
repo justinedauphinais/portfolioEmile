@@ -2,17 +2,21 @@
 <?php ob_start(); ?>
 
 <main id="dragQueen">
-    <section id="0" class="queenPhotos">
-        <p>model : Lady Boom Boom</p>
-        <div id="photo_01"></div>
+    <section id="boomboom" class="queenPhotos">
+        <p class="noOpacity">model : Lady Boom Boom</p>
+        <div>
+            <div id="b_01" class="boomboomPhotos"></div>
+            <div id="b_02" class="boomboomPhotos hide"></div>
+            <div id="b_03" class="boomboomPhotos hide"></div>
+        </div>
     </section>
-    <section id="1" class="queenPhotos">
+    <section id="fountain" class="queenPhotos">
         <p>model : Lady Boom Boom</p>
-        <div id="photo_02"></div>
+        <div id="p_01"></div>
     </section>
-    <section id="2" class="queenPhotos">
+    <section id="sam" class="queenPhotos">
         <p>model : Lady Boom Boom</p>
-        <div id="photo_03"></div>
+        <div id="p_01"></div>
     </section>
 </main>
 

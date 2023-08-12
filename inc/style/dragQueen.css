@@ -22,31 +22,71 @@
     margin-top: 0;
 }
 
-#dragQueen #photo_01 {
+#dragQueen section > div {
+    width: 58.828125vw;
+    height: 79vh;
+    display: flex;
+    overflow: hidden;
+}
+
+#dragQueen #b_01 {
     background-image: url("../../public/images/photoshoot/drag/01.jpg");
     background-clip: content-box;
-    background-size: cover;
+    background-size: 58.828125vw 79vh;
     width: 58.828125vw;
     height: 79vh;
     z-index: 1;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
-#dragQueen #photo_02 {
+#dragQueen #b_02 {
     background-image: url("../../public/images/photoshoot/drag/02.jpg");
     background-clip: content-box;
-    background-size: cover;
+    background-size: 58.828125vw 79vh;
+    width: 58.828125vw;
+    height: 79vh;
+    z-index: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#dragQueen #b_03 {
+    background-image: url("../../public/images/photoshoot/drag/03.jpg");
+    background-clip: content-box;
+    background-size: 58.828125vw 79vh;
     width: 58.828125vw;
     height: 79vh;
     z-index: 1;
 }
 
-#dragQueen #photo_03 {
-    background-image: url("../../public/images/photoshoot/drag/03.jpg");
-    background-clip: content-box;
-    background-size: cover;
-    width: 58.828125vw;
-    height: 79vh;
-    z-index: 1;
+    /* horizontal carousel */
+.scrollOutLeft {
+    animation: scrollOutLeftAn 1s forwards;
+}
+
+@keyframes scrollOutLeftAn {
+    from {
+        width: 58.828125vw;
+    }
+    to {
+        width: 0;
+    }
+}
+
+.scrollInRight {
+    animation: scrollInRightAn 1s forwards;
+}
+
+@keyframes scrollInRightAn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 58.828125vw;
+    }
 }
 
     /* vertical carousel */
@@ -145,8 +185,17 @@
 }
 
 @keyframes scrollOutOfPageAn {
-    to {
-        margin-top: -65vh;
+    0% {
+        height: var(--height);
+        margin-top: min(22.24px, 1.54444444vh);
+    }
+    95% {
+        margin-top: -5px;
+        height: var(--height);
+    }
+    100% {
+        margin-top: -5px;
+        height: 0;
     }
 }
 
@@ -155,10 +204,41 @@
 }
 
 @keyframes scrollIntoPageAn {
-    from {
-        margin-top: -65vh;
+    0% {
+        margin-top: -5px;
+        height: 0;
     }
-    to {
+    100% {
+        height: var(--height);
         margin-top: min(22.24px, 1.54444444vh);
+    }
+}
+
+.scrollOutOfPageInnerDiv {
+    animation: scrollOutOfPageInnerDivAn 0.5s forwards;
+}
+
+@keyframes scrollOutOfPageInnerDivAn {
+    0% {
+        margin-top: 0;
+    }
+    5% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: -75px;
+    }
+}
+
+.scrollIntoPageInnerDiv {
+    animation: scrollIntoPageInnerDivAn 0.5s forwards;
+}
+
+@keyframes scrollIntoPageInnerDivAn {
+    0% {
+        margin-top: -75px;
+    }
+    100% {
+        margin-top: 0px;
     }
 }

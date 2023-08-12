@@ -126,11 +126,15 @@
 
     /* Links */
 #socials {
+    margin-top: min(22.24px, 1.54444444vh);
+    z-index: 99;
+    overflow: hidden;
+}
+
+#socials > div {
     display: flex;
     flex-direction: column;
     gap: 0.4861111vh;
-    margin-top: min(22.24px, 1.54444444vh);
-    z-index: 99;
 }
 
 #socials a {
@@ -211,6 +215,7 @@
     font-weight: 400;
     font-style: normal;
     margin-top: min(22.24px, 1.54444444vh);
+    overflow: hidden;
 }
 
 #service, #contact {
