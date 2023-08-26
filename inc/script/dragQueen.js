@@ -25,6 +25,8 @@ var boomboomPhotos = document.querySelectorAll(".boomboomPhotos");
 var socials = document.getElementById("socials");
 var socialsInnerDiv = document.getElementById("socialsInnerDiv");
 var email = document.getElementById("email");
+var cube = document.querySelector(".cube");
+var modelNames = document.getElementById("modelsInnerDiv");
 
 
 window.onwheel = function() {verticalCarousel(event)};
@@ -37,13 +39,24 @@ function verticalCarousel(evt) {
                     currentPhotoVertical -= 1;
                 }
 
+                var px = parseInt(getComputedStyle(modelNames).getPropertyValue('--margin-top').replace('px','')) + 26;
+                console.log(px);
+
                 if (currentPhotoVertical == 1) {
-                    dragQueen.classList = "";
-                    dragQueen.classList.add("scrollUpTwoPage");
+                    cube.style.transform = "rotateX(90deg)";
+                    modelNames.classList = "modelNamesScrollUp";
+                    modelNames.style.setProperty("--margin-top", px + "px");
+                    modelNames.style.animation = 'none';
+                    modelNames.offsetHeight; /* trigger reflow */
+                    modelNames.style.animation = null;
                 }
                 else if (currentPhotoVertical == 0) {
-                    dragQueen.classList = "";
-                    dragQueen.classList.add("scrollUpOnePage");
+                    cube.style.transform = "rotateX(0deg)";
+                    modelNames.classList = "modelNamesScrollUp";
+                    modelNames.style.setProperty("--margin-top", px + "px");
+                    modelNames.style.animation = 'none';
+                    modelNames.offsetHeight; /* trigger reflow */
+                    modelNames.style.animation = null;
                 }
                 else if (currentPhotoVertical == -1 && document.getElementById("email").classList.contains("scrollOutOfPage")) {
                     dragQueen.classList = "";
@@ -54,12 +67,19 @@ function verticalCarousel(evt) {
                     email.classList.add("scrollIntoPage");
                     socials.classList.add("scrollIntoPage");
                     socialsInnerDiv.classList.add("scrollIntoPageInnerDiv");
+                    modelNames.classList = "modelNamesScrollUp";
+                    modelNames.style.setProperty("--margin-top", px + "px");
+                    modelNames.style.animation = 'none';
+                    modelNames.offsetHeight; /* trigger reflow */
+                    modelNames.style.animation = null;
                 }
             }
             if (evt.deltaY > 0) {
                 if (currentPhotoVertical != 2) {
                     currentPhotoVertical += 1;
                 }
+
+                var px = parseInt(getComputedStyle(modelNames).getPropertyValue('--margin-top').replace('px','')) - 26;
 
                 if (currentPhotoVertical == 0) {
                     dragQueen.classList = "";
@@ -70,20 +90,30 @@ function verticalCarousel(evt) {
                     email.classList.add("scrollOutOfPage");
                     socials.classList.add("scrollOutOfPage");
                     socialsInnerDiv.classList.add("scrollOutOfPageInnerDiv");
+                    modelNames.classList = "modelNamesScrollDown";
+                    modelNames.style.setProperty("--margin-top", px + "px");
                 }
                 else if (currentPhotoVertical == 1) {
-                    dragQueen.classList = "";
-                    dragQueen.classList.add("scrollDownOnePage");
+                    cube.style.transform = "rotateX(90deg)";
+                    modelNames.classList = "modelNamesScrollDown";
+                    modelNames.style.setProperty("--margin-top", px + "px");
+                    modelNames.style.animation = 'none';
+                    modelNames.offsetHeight; /* trigger reflow */
+                    modelNames.style.animation = null;
                 }
                 else if (currentPhotoVertical == 2) {
-                    dragQueen.classList = "";
-                    dragQueen.classList.add("scrollDownTwoPage");
+                    cube.style.transform = "rotateX(180deg)";
+                    modelNames.classList = "modelNamesScrollDown";
+                    modelNames.style.setProperty("--margin-top", px + "px");
+                    modelNames.style.animation = 'none';
+                    modelNames.offsetHeight; /* trigger reflow */
+                    modelNames.style.animation = null;
                 }
             }
 
             timer = setTimeout(() => {
                 timer = null;
-            },  1000);
+            },  300);
         }
     }
 }
@@ -98,7 +128,6 @@ function horizontalCarousel(evt) {
 
     var numPhoto = currentPhotoHorizontal[currentPhotoVertical] + 1;
     var photo1 = document.getElementById(photoshoots[currentPhotoVertical] + "0" + numPhoto);
-    console.log(photoshoots[currentPhotoVertical] + "0" + numPhoto + 1);
 
     if (numPhoto > numOfPhotos[currentPhotoVertical] - 1) {
         numPhoto = 0;
@@ -107,7 +136,6 @@ function horizontalCarousel(evt) {
     currentPhotoHorizontal[currentPhotoVertical] = numPhoto;
     numPhoto = numPhoto + 1;
     var photo2 = document.getElementById(photoshoots[currentPhotoVertical] + "0" + numPhoto);
-    console.log(photoshoots[currentPhotoVertical] + "0" + numPhoto);
 
     photo1.classList = "scrollOutLeft";
     photo2.classList = "scrollInRight";

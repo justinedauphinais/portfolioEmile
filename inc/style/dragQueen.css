@@ -22,44 +22,35 @@
     margin-top: 0;
 }
 
-#dragQueen section > div {
+.cube__face > div > div {
     width: 58.828125vw;
-    height: 79vh;
+    height: calc(100vh - 16vh - 4.375vh);
     display: flex;
     overflow: hidden;
 }
 
 #dragQueen #b_01 {
+    width: 58.828125vw;
+    height: calc(100vh - 16vh - 4.375vh);
     background-image: url("../../public/images/photoshoot/drag/01.jpg");
     background-clip: content-box;
-    background-size: 58.828125vw 79vh;
-    width: 58.828125vw;
-    height: 79vh;
-    z-index: 1;
-    position: relative;
-    top: 0;
-    left: 0;
+    background-size: 58.828125vw calc(100vh - 16vh - 4.375vh);
 }
 
 #dragQueen #b_02 {
+    width: 58.828125vw;
+    height: calc(100vh - 16vh - 4.375vh);
     background-image: url("../../public/images/photoshoot/drag/02.jpg");
     background-clip: content-box;
-    background-size: 58.828125vw 79vh;
-    width: 58.828125vw;
-    height: 79vh;
-    z-index: 1;
-    position: relative;
-    top: 0;
-    left: 0;
+    background-size: 58.828125vw calc(100vh - 16vh - 4.375vh);
 }
 
 #dragQueen #b_03 {
+    width: 58.828125vw;
+    height: calc(100vh - 16vh - 4.375vh);
     background-image: url("../../public/images/photoshoot/drag/03.jpg");
     background-clip: content-box;
-    background-size: 58.828125vw 79vh;
-    width: 58.828125vw;
-    height: 79vh;
-    z-index: 1;
+    background-size: 58.828125vw calc(100vh - 16vh - 4.375vh);
 }
 
     /* horizontal carousel */
@@ -118,70 +109,41 @@
     }
 }
 
-.scrollDownOnePage {
-    animation: scrollOnePageAn 0.75s forwards;
+#scene {
+    width: 58.828125vw;
+    height: calc(100vh - 16vh - 4.375vh);
+    perspective: 551.828125vw;
+}
+  
+.cube {
+    width: 58.828125vw;
+    height: calc(100vh - 16vh - 4.375vh);
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-100px);
+    transition: transform 1s;
 }
 
-@keyframes scrollOnePageAn {
-    from {
-        margin-top: 16vh;
-        height: calc(100vh - 16vh);
-    }
-    to {
-        margin-top: -78vh;
-        height: calc(100vh + 78vh);
-    }
+.cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
+.cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }
+.cube.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+
+.cube__face {
+    position: absolute;
+    width: 58.828125vw;
+    height: calc(100vh - 16vh - 4.375vh);
 }
 
-.scrollUpOnePage {
-    animation: scrollUpOnePageAn 0.75s forwards;
-}
-
-@keyframes scrollUpOnePageAn {
-    from {
-        margin-top: -78vh;
-        height: calc(100vh + 78vh);
-    }
-    to {
-        margin-top: 16vh;
-        height: calc(100vh - 16vh);
-    }
-}
-
-.scrollDownTwoPage {
-    animation: scrollTwoPageAn 0.75s forwards;
-}
-
-@keyframes scrollTwoPageAn {
-    from {
-        margin-top: -78vh;
-        height: calc(100vh + 78vh);
-    }
-    to {
-        margin-top: -172vh;
-        height: calc(100vh + 172vh);
-    }
-}
-
-.scrollUpTwoPage {
-    animation: scrollUpTwoPageAn 0.75s forwards;
-}
-
-@keyframes scrollUpTwoPageAn {
-    from {
-        margin-top: -172vh;
-        height: calc(100vh + 172vh);
-    }
-    to {
-        margin-top: -78vh;
-        height: calc(100vh + 78vh);
-    }
-}
+.cube__face--front  { transform: rotateY(  0deg) translateZ(39.5vh); }
+.cube__face--back   { transform: rotateY(180deg) rotateZ(180deg) translateZ(39.5vh); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(39.5vh); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(39.5vh); }
 
     /* scrollOutNav */
 
 .scrollOutOfPage {
-    animation: scrollOutOfPageAn 0.5s forwards;
+    animation: scrollOutOfPageAn var(--speed) forwards;
 }
 
 @keyframes scrollOutOfPageAn {
@@ -200,7 +162,7 @@
 }
 
 .scrollIntoPage {
-    animation: scrollIntoPageAn 0.5s forwards;
+    animation: scrollIntoPageAn var(--speed) forwards;
 }
 
 @keyframes scrollIntoPageAn {
@@ -240,5 +202,56 @@
     }
     100% {
         margin-top: 0px;
+    }
+}
+
+    /* modelNamesScroll */
+#models {
+    height: 26px;
+    overflow: hidden;
+}
+
+#modelsInnerDiv {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+}
+
+#models p {
+    font-size: 26px;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.modelNamesScrollDown {
+    animation: modelNamesScrollDownAn 0.6s forwards;
+}
+
+@keyframes modelNamesScrollDownAn {
+    0% {
+        margin-top: calc(var(--margin-top) + 26px);
+    }
+    83% {
+        margin-top: calc(var(--margin-top) + 26px);
+    }
+    100% {
+        margin-top: var(--margin-top);
+    }
+}
+
+.modelNamesScrollUp {
+    animation: modelNamesScrollUpAn 0.6s forwards;
+}
+
+@keyframes modelNamesScrollUpAn {
+    0% {
+        margin-top: calc(var(--margin-top) - 26px);
+    }
+    83% {
+        margin-top: calc(var(--margin-top) - 26px);
+    }
+    100% {
+        margin-top: var(--margin-top);
     }
 }

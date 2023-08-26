@@ -36,7 +36,7 @@
                 <div id="emilerouillard">
                     <div>
                         <div id="name1"></div>
-                        <div id="socials" style="--height: 75px;">
+                        <div id="socials" style="--height: 75px; --speed: 0.5s;">
                             <div id="socialsInnerDiv">
                                 <div id="socialLine">
                                     <a id="behance" href="https://www.behance.net/Emile_Rouillard" target="_blank">behance</a>
@@ -58,7 +58,7 @@
                     </div>
                     <div>
                         <div id="name2"></div>
-                        <p id="email"  style="--height: 16px;">emile.graphiste@gmail.com</p>
+                        <p id="email"  style="--height: 16px; --speed: 0.3s;">emile.graphiste@gmail.com</p>
                     </div>
                     <div id="serviceDiv">
                         <div id="name3"></div>
