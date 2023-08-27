@@ -21,4 +21,32 @@
     font-weight: 500;
     font-size: 20px;
     font-family: roc-grotesk, sans-serif;
+    line-height: 28px;
+}
+
+@media only screen and (max-width: 1200px) {
+    #aPropos #photo_01 {
+        background-image: url("../../public/images/photoshoot/accueil/photo_01.jpg");
+        background-clip: content-box;
+        background-size: cover;
+        position: absolute;
+        bottom: 7.451875vh;
+        left: calc(2vw + 0.398vw + 2.578125vw);
+        width: 52vw;
+        height: 52vw;
+        max-width: 541px;
+        max-height: 545px;
+    }
+    
+    #aPropos #paragraph {
+        display: flex;
+        align-items: end;
+        position: absolute;
+        bottom: calc(7.451875vh + 26px + min(52vw, 545px));
+        right: calc(2vw + 5vw);
+        width: 52vw;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: roc-grotesk, sans-serif;
+    }
 }

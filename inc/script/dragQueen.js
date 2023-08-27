@@ -27,6 +27,7 @@ var socialsInnerDiv = document.getElementById("socialsInnerDiv");
 var email = document.getElementById("email");
 var cube = document.querySelector(".cube");
 var modelNames = document.getElementById("modelsInnerDiv");
+var px = 0;
 
 
 window.onwheel = function() {verticalCarousel(event)};
@@ -35,14 +36,15 @@ function verticalCarousel(evt) {
     if (window.location.href.includes("dragQueen")) {
         if (timer == null) {
             if (evt.deltaY < 0) {
+                var changed = false;
+
                 if (currentPhotoVertical != -1) {
+                    changed = true;
                     currentPhotoVertical -= 1;
+                    px = parseInt(getComputedStyle(modelNames).getPropertyValue('--margin-top').replace('px','')) + 26;
                 }
 
-                var px = parseInt(getComputedStyle(modelNames).getPropertyValue('--margin-top').replace('px','')) + 26;
-                console.log(px);
-
-                if (currentPhotoVertical == 1) {
+                if (currentPhotoVertical == 1 && changed) {
                     cube.style.transform = "rotateX(90deg)";
                     modelNames.classList = "modelNamesScrollUp";
                     modelNames.style.setProperty("--margin-top", px + "px");
@@ -50,7 +52,7 @@ function verticalCarousel(evt) {
                     modelNames.offsetHeight; /* trigger reflow */
                     modelNames.style.animation = null;
                 }
-                else if (currentPhotoVertical == 0) {
+                else if (currentPhotoVertical == 0 && changed) {
                     cube.style.transform = "rotateX(0deg)";
                     modelNames.classList = "modelNamesScrollUp";
                     modelNames.style.setProperty("--margin-top", px + "px");
@@ -58,7 +60,7 @@ function verticalCarousel(evt) {
                     modelNames.offsetHeight; /* trigger reflow */
                     modelNames.style.animation = null;
                 }
-                else if (currentPhotoVertical == -1 && document.getElementById("email").classList.contains("scrollOutOfPage")) {
+                else if (currentPhotoVertical == -1 && document.getElementById("email").classList.contains("scrollOutOfPage") && changed) {
                     dragQueen.classList = "";
                     dragQueen.classList.add("scrollOutOfView");
                     email.classList.remove("scrollOutOfPage");
@@ -75,13 +77,15 @@ function verticalCarousel(evt) {
                 }
             }
             if (evt.deltaY > 0) {
+                var changed = false;
+
                 if (currentPhotoVertical != 2) {
+                    changed = true;
                     currentPhotoVertical += 1;
+                    px = parseInt(getComputedStyle(modelNames).getPropertyValue('--margin-top').replace('px','')) - 26;
                 }
 
-                var px = parseInt(getComputedStyle(modelNames).getPropertyValue('--margin-top').replace('px','')) - 26;
-
-                if (currentPhotoVertical == 0) {
+                if (currentPhotoVertical == 0 && changed) {
                     dragQueen.classList = "";
                     dragQueen.classList.add("scrollIntoView");
                     email.classList.remove("scrollIntoPage");
@@ -93,7 +97,7 @@ function verticalCarousel(evt) {
                     modelNames.classList = "modelNamesScrollDown";
                     modelNames.style.setProperty("--margin-top", px + "px");
                 }
-                else if (currentPhotoVertical == 1) {
+                else if (currentPhotoVertical == 1 && changed) {
                     cube.style.transform = "rotateX(90deg)";
                     modelNames.classList = "modelNamesScrollDown";
                     modelNames.style.setProperty("--margin-top", px + "px");
@@ -101,7 +105,7 @@ function verticalCarousel(evt) {
                     modelNames.offsetHeight; /* trigger reflow */
                     modelNames.style.animation = null;
                 }
-                else if (currentPhotoVertical == 2) {
+                else if (currentPhotoVertical == 2 && changed) {
                     cube.style.transform = "rotateX(180deg)";
                     modelNames.classList = "modelNamesScrollDown";
                     modelNames.style.setProperty("--margin-top", px + "px");
