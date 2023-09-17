@@ -98,6 +98,50 @@
     #othersDiv, #contactDiv {
         display: none;
     }
+
+    #socials {
+        margin-top: 10px !important;
+    }
+    
+    #socialsInnerDiv {
+        gap: 0px !important;
+    }
+
+    #socials a, #email {
+        font-size: min(3vw, 14px);
+    }
+
+    #service {
+        display: none;
+    }
+
+    #behanceBracketLeft {
+        left: -69px !important;
+    }
+
+    #linkedinBracketLeft {
+        left: -63px !important;
+    }
+
+    #instagramBracketLeft {
+        left: -81px !important;
+    }
+
+    #accueilBracketLeft {
+        left: -58px !important;
+    }
+
+    #actionBracketLeft {
+        left: -53px !important;
+    }
+
+    #modeBracketLeft {
+        left: -51px !important;
+    }
+
+    #dragQueenBracketLeft {
+        left: -90px !important;
+    }
 }
 
     /** WEB **/
@@ -491,6 +535,10 @@ nav {
         display: flex;
         gap: 30px;
         z-index: 99;
+    }
+
+    nav a {
+        font-size: min(3vw, 14px);
     }
 }
 
