@@ -25,6 +25,7 @@ var boomboomPhotos = document.querySelectorAll(".boomboomPhotos");
 var socials = document.getElementById("socials");
 var socialsInnerDiv = document.getElementById("socialsInnerDiv");
 var email = document.getElementById("email");
+var emailInnerDiv = document.getElementById("emailInnerDiv");
 var cube = document.querySelector(".cube");
 var modelNames = document.getElementById("modelsInnerDiv");
 var px = 0;
@@ -60,14 +61,16 @@ function verticalCarousel(evt) {
                     modelNames.offsetHeight; /* trigger reflow */
                     modelNames.style.animation = null;
                 }
-                else if (currentPhotoVertical == -1 && document.getElementById("email").classList.contains("scrollOutOfPage") && changed) {
+                else if (currentPhotoVertical == -1 && changed) {
                     dragQueen.classList = "";
                     dragQueen.classList.add("scrollOutOfView");
-                    email.classList.remove("scrollOutOfPage");
+                    emailInnerDiv.classList.remove("scrollOutOfPageInnerDiv");
                     socials.classList.remove("scrollOutOfPage");
+                    email.classList.remove("scrollOutOfPage");
                     socialsInnerDiv.classList.remove("scrollOutOfPageInnerDiv");
-                    email.classList.add("scrollIntoPage");
+                    emailInnerDiv.classList.add("scrollIntoPageInnerDiv");
                     socials.classList.add("scrollIntoPage");
+                    email.classList.remove("scrollIntoPage");
                     socialsInnerDiv.classList.add("scrollIntoPageInnerDiv");
                     modelNames.classList = "modelNamesScrollUp";
                     modelNames.style.setProperty("--margin-top", px + "px");
@@ -88,11 +91,13 @@ function verticalCarousel(evt) {
                 if (currentPhotoVertical == 0 && changed) {
                     dragQueen.classList = "";
                     dragQueen.classList.add("scrollIntoView");
-                    email.classList.remove("scrollIntoPage");
+                    emailInnerDiv.classList.remove("scrollIntoPageInnerDiv");
                     socials.classList.remove("scrollIntoPage");
+                    email.classList.remove("scrollIntoPage");
                     socialsInnerDiv.classList.remove("scrollIntoPageInnerDiv");
-                    email.classList.add("scrollOutOfPage");
+                    emailInnerDiv.classList.add("scrollOutOfPageInnerDiv");
                     socials.classList.add("scrollOutOfPage");
+                    email.classList.remove("scrollOutOfPage");
                     socialsInnerDiv.classList.add("scrollOutOfPageInnerDiv");
                     modelNames.classList = "modelNamesScrollDown";
                     modelNames.style.setProperty("--margin-top", px + "px");
@@ -117,7 +122,7 @@ function verticalCarousel(evt) {
 
             timer = setTimeout(() => {
                 timer = null;
-            },  300);
+            },  500);
         }
     }
 }

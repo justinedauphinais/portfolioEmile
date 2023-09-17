@@ -31,7 +31,7 @@
         background-size: cover;
         position: absolute;
         bottom: 7.451875vh;
-        left: calc(2vw + 0.398vw + 2.578125vw);
+        left: calc(5.85vw + 2vw);
         width: 52vw;
         height: 52vw;
         max-width: 541px;
@@ -46,7 +46,7 @@
         right: calc(2vw + 5vw);
         width: 52vw;
         font-weight: 500;
-        font-size: 14px;
+        font-size: min(3vw, 14px);
         font-family: roc-grotesk, sans-serif;
     }
 }

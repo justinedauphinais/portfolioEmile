@@ -60,7 +60,8 @@
     height: calc(100vh - 16vh - 4.375vh);
     background-image: url("../../public/images/photoshoot/drag/01.jpg");
     background-clip: content-box;
-    background-size: 58.828125vw calc(100vh - 16vh - 4.375vh);
+    background-size: cover;
+    background-position: center;
 }
 
 #dragQueen #b_02 {
@@ -68,7 +69,8 @@
     height: calc(100vh - 16vh - 4.375vh);
     background-image: url("../../public/images/photoshoot/drag/02.jpg");
     background-clip: content-box;
-    background-size: 58.828125vw calc(100vh - 16vh - 4.375vh);
+    background-size: cover;
+    background-position: center;
 }
 
 #dragQueen #b_03 {
@@ -76,15 +78,14 @@
     height: calc(100vh - 16vh - 4.375vh);
     background-image: url("../../public/images/photoshoot/drag/03.jpg");
     background-clip: content-box;
-    background-size: 58.828125vw calc(100vh - 16vh - 4.375vh);
-}
-
-@media only screen and (max-width: 1200px) {
+    background-size: cover;
+    background-position: center;
+    /* background-size: 58.828125vw calc(100vh - 16vh - 4.375vh); */
 }
 
     /* horizontal carousel */
 .scrollOutLeft {
-    animation: scrollOutLeftAn 1s forwards;
+    animation: scrollOutLeftAn 0.5s forwards;
 }
 
 @keyframes scrollOutLeftAn {
@@ -97,7 +98,7 @@
 }
 
 .scrollInRight {
-    animation: scrollInRightAn 1s forwards;
+    animation: scrollInRightAn 0.5s forwards;
 }
 
 @keyframes scrollInRightAn {

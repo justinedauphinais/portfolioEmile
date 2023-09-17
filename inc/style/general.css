@@ -15,10 +15,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    cursor: url(../../public/cursor/cursor.png), auto !important;
 }
 
 html {
     overflow:hidden;
+    cursor: url(../../public/cursor/cursor.png), auto !important;
 }
 
 /******** General ********/
