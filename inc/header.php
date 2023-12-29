@@ -20,16 +20,6 @@
 <?php require_once('inc/setup_langue.php'); ?>
 
 <body>
-    <aside>
-        <ul>
-            <?php 
-                $url = substr($_SERVER['REQUEST_URI'], 0, strpos($_SERVER['REQUEST_URI'], "?"));
-            ?>
-
-            <li><a href="<?= $url;?>?langue=en">English</li>
-            <li><a href="<?= $url;?>?langue=fr">Français</li>
-        </ul>
-    </aside>
     <header>
         <div id="nameFlex">
             <div id="leftBracket" class="noOpacity bracketName"></div>
@@ -74,6 +64,10 @@
                 <div id="contactDiv">
                     <div id="name5"></div>
                     <p id="contact" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>><?php echo ($_SESSION['langue'] == "fr" )?"me contactez":"contact me" ?></p>
+                    <div id="langues" class=<?= str_contains($_SERVER['REQUEST_URI'], "index") || strcmp($_SERVER['REQUEST_URI'], '\\Emile\\') ? "" : "hide"; ?>>
+                        <a href="<?= $url;?>?langue=en">Français</a>
+                        <a href="<?= $url;?>?langue=fr">Anglais</a>
+                    </div>
                 </div>
             </div>
             <div id="rightBracket" class="noOpacity bracketName"></div>

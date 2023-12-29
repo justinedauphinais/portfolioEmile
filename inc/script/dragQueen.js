@@ -29,12 +29,16 @@ var emailInnerDiv = document.getElementById("emailInnerDiv");
 var cube = document.querySelector(".cube");
 var modelNames = document.getElementById("modelsInnerDiv");
 var px = 0;
-
+var timerTime = 0;
 
 window.onwheel = function() {verticalCarousel(event)};
+document.addEventListener("mousewheel", verticalCarousel(event));
+document.addEventListener("DOMMouseScroll", verticalCarousel(event));
 
 function verticalCarousel(evt) {
     if (window.location.href.includes("dragQueen")) {
+        var timerTime = 1000;
+
         if (timer == null) {
             if (evt.deltaY < 0) {
                 var changed = false;
@@ -122,7 +126,7 @@ function verticalCarousel(evt) {
 
             timer = setTimeout(() => {
                 timer = null;
-            },  500);
+            },  timerTime);
         }
     }
 }

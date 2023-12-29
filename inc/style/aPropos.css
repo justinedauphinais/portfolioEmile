@@ -1,6 +1,6 @@
 @media only screen and (min-width: 1200px) {
     #aPropos #photo_01 {
-        background-image: url("../../public/images/photoshoot/accueil/photo_01.jpg");
+        background-image: url("../../public/images/emile.webp");
         background-clip: content-box;
         background-size: cover;
         position: absolute;
@@ -28,7 +28,7 @@
 
 @media only screen and (max-width: 1200px) {
     #aPropos #photo_01 {
-        background-image: url("../../public/images/photoshoot/accueil/photo_01.jpg");
+        background-image: url("../../public/images/emile.webp");
         background-clip: content-box;
         background-size: cover;
         position: absolute;

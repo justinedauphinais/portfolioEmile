@@ -99,7 +99,7 @@
         display: none;
     }
 
-    #socials {
+    #socials, #langues {
         margin-top: 10px !important;
     }
     
@@ -278,13 +278,30 @@
 }
 
 @media only screen and (max-width: 1200px) {
-    #socials {
+    #socials, #langues {
         margin-top: 10px;
     }
 
     #email {
         margin-top: 10px !important;
     }
+}
+
+#langues {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4861111vh;
+    margin-top: 10px;
+}
+
+#langues a {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--black);
+    z-index: 99;
+    line-height: 1;
 }
 
 #socials > div {
@@ -300,6 +317,7 @@
     text-decoration: none;
     color: var(--black);
     z-index: 99;
+    line-height: 1;
 }
 
 #behance {

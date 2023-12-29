@@ -16,6 +16,7 @@
     margin: 0;
     box-sizing: border-box;
     cursor: url(../../public/cursor/cursor.png), auto !important;
+    line-height: 1;
 }
 
 html {

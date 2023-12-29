@@ -58,7 +58,7 @@
 #dragQueen #b_01 {
     width: 58.828125vw;
     height: calc(100vh - 16vh - 4.375vh);
-    background-image: url("../../public/images/photoshoot/drag/01.jpg");
+    background-image: url("../../public/images/photoshoot/drag/2.jpg");
     background-clip: content-box;
     background-size: cover;
     background-position: center;
@@ -67,7 +67,7 @@
 #dragQueen #b_02 {
     width: 58.828125vw;
     height: calc(100vh - 16vh - 4.375vh);
-    background-image: url("../../public/images/photoshoot/drag/02.jpg");
+    background-image: url("../../public/images/photoshoot/drag/01.webp");
     background-clip: content-box;
     background-size: cover;
     background-position: center;

@@ -23,7 +23,7 @@
     }
     
     #index #photo_02 {
-        background-image: url("../../public/images/photoshoot/accueil/photo_01.jpg");
+        background-image: url("../../public/images/photoshoot/accueil/photo_01.webp");
         background-clip: content-box;
         background-size: cover;
         width: 28.828125vw;
@@ -32,7 +32,7 @@
     }
     
     #index #photo_01 {
-        background-image: url("../../public/images/photoshoot/accueil/photo_02.jpg");
+        background-image: url("../../public/images/photoshoot/accueil/photo_02.webp");
         background-clip: content-box;
         background-size: cover;
         width: 28.828125vw;
