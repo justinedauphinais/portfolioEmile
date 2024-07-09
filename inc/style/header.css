@@ -1,8 +1,4 @@
 /******** Header ********/
-.hide {
-    display: none;
-}
-
     /** MOBILE **/
 @media only screen and (max-width: 1200px) {
     #nameButton {
@@ -291,6 +287,14 @@
     display: flex;
     flex-direction: column;
     gap: 0.4861111vh;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+#langues:first-of-type {
     margin-top: 10px;
 }
 
@@ -540,9 +544,19 @@ nav {
     bottom: 4.375vh;
     left: calc(2vw + 0.398vw + 2.578125vw);
     display: flex;
-    gap: 50px;
+    gap: 50px; 
     z-index: 99;
-    cursor: url(../../public/cursor/cursor.png), auto !important;
+}
+
+@media only screen and (max-width: 1500px) {
+    nav {
+        position: absolute;
+        bottom: 24px;
+        left: calc(5.5vw);
+        display: flex;
+        gap: 15px;
+        z-index: 99;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -551,7 +565,7 @@ nav {
         bottom: 24px;
         left: calc(5.85vw + 2vw);
         display: flex;
-        gap: 30px;
+        gap: 2em;
         z-index: 99;
     }
 
@@ -566,7 +580,6 @@ nav a {
     font-style: normal;
     text-decoration: none;
     color: var(--black);
-    cursor: url(../../public/cursor/cursor.png), auto !important;
 }
 
 #accueilLine, #actionLine, #modeLine, #dragQueenLine {
@@ -635,7 +648,7 @@ nav a {
 
 #dragQueenBracketLeft {
     position: relative;
-    left: -101px;
+    left: -49px;
     top: -2px;
     color: var(--orange);
 }

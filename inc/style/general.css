@@ -15,19 +15,22 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    cursor: url(../../public/cursor/cursor.png), auto !important;
     line-height: 1;
 }
 
 html {
     overflow:hidden;
-    cursor: url(../../public/cursor/cursor.png), auto !important;
 }
 
 /******** General ********/
 
 .noOpacity {
     opacity: 0;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
 }
 
 /******** Animations ********/

@@ -22,7 +22,7 @@
     </div>
     <div id="dragQueenLine">
         <a id="dragQueenLink" href="dragQueen.php">
-            <?php echo ($_SESSION['langue'] == "fr" )?"drag queen":"drag queen" ?>
+            <?php echo ($_SESSION['langue'] == "fr" )?"drag":"drag" ?>
         </a>
         <p id="dragQueenBracketRight" class="noOpacity bracketDragQueen">)</p>
         <p id="dragQueenBracketLeft" class="noOpacity bracketDragQueen">(</p>

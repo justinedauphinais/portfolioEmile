@@ -1,4 +1,4 @@
-<?php $baseURL = "/portfolioEmile/"?>
+<?php $baseURL = "/portfolioEmile"?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,6 +43,11 @@
                                 <p id="instagramBracketRight" class="noOpacity bracketInstagram">)</p>
                                 <p id="instagramBracketLeft" class="noOpacity bracketInstagram">(</p>
                             </div>
+                            <div id="socialLine">
+                                <a id="instagram" href="https://www.tiktok.com/@emile.r.photo" target="_blank">tiktok</a>
+                                <p id="instagramBracketRight" class="noOpacity bracketTiktok">)</p>
+                                <p id="instagramBracketLeft" class="noOpacity bracketTiktok">(</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -63,10 +68,10 @@
                 </div>
                 <div id="contactDiv">
                     <div id="name5"></div>
-                    <p id="contact" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>><?php echo ($_SESSION['langue'] == "fr" )?"me contactez":"contact me" ?></p>
-                    <div id="langues" class=<?= str_contains($_SERVER['REQUEST_URI'], "index") || strcmp($_SERVER['REQUEST_URI'], '\\Emile\\') ? "" : "hide"; ?>>
-                        <a href="<?= $url;?>?langue=en">Français</a>
-                        <a href="<?= $url;?>?langue=fr">Anglais</a>
+                    <p id="contact" class=<?= str_contains($_SERVER['REQUEST_URI'], "aPropos")?"":"hide"; ?>><?php echo ($_SESSION['langue'] == "fr" )?"contact":"contact" ?></p>
+                    <div id="langues" class=<?= str_contains($_SERVER['REQUEST_URI'], "index") /* || strcmp($_SERVER['REQUEST_URI'], '\\Emile\\') */ ? "" : "hide"; ?>>
+                        <a href="<?= $baseURL;?>?langue=en">français</a>
+                        <a href="<?= $baseURL;?>?langue=fr">english</a>
                     </div>
                 </div>
             </div>

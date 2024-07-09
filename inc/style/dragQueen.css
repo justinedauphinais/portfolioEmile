@@ -8,6 +8,17 @@
     height: calc(100vh - 60vh);
 }
 
+@media only screen and (max-width: 1500px) {
+    #dragQueen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 60vh;
+        padding-left: calc(5.5vw);
+        height: calc(100vh - 60vh);
+    }
+}
+
     /* sections */
 #dragQueen section {
     width: calc(100vw - (2vw + 0.398vw + 3vw) * 2);
@@ -15,6 +26,16 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 0;
+}
+
+@media only screen and (max-width: 1500px) {
+    #dragQueen section {
+        width: calc(100vw - (2vw + 0.398vw + 3vw) * 2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 0;
+    }
 }
 
 #scene {
